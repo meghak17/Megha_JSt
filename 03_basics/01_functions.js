@@ -29,5 +29,40 @@ function msg(username){
     }
      
 }
-console.log(msg())//when the parameter is 
+//console.log(msg())//when the parameter is 
 //empty the value is undefined
+
+//...rest operator or spread operator used to take multiple values
+function calCartPrice(val1,val2,...num1){
+    return num1
+}
+console.log(calCartPrice(200,400,500,700,100,900))//array
+//console.log(calCartPrice());
+
+//objects in functions
+
+const user = {
+    usern :  "Megha",
+    price : 299
+}
+
+function handle(any){
+     console.log(`username is ${any.usern} and price is ${any.price}`);
+
+}
+//handle(user)//we can send objects that key and value 
+handle({
+    usern:"Meghaaa",
+    price:499
+})
+
+//array in function
+
+const myArray = [10,20,30,40]
+
+function myFun(getArr){
+    return getArr
+}
+
+console.log(myFun(myArray));//[ 10, 20, 30, 40 ]
+console.log(myFun([500,600,700,800]));
